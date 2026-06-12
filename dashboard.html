@@ -272,9 +272,23 @@
         });
 
         // Logout function
-        function logout() {
-            localStorage.removeItem('access_token');
-            window.location.href = 'login.html';
+        async function logout() {
+            try {
+                // Optional: hit the backend logout endpoint
+                const token = localStorage.getItem('access_token');
+                if (token) {
+                    await fetch(ENV.API_URL + '/auth/logout', {
+                        method: 'POST',
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                }
+            } catch (err) {
+                console.error('Logout error:', err);
+            } finally {
+                // Clear token and redirect regardless of backend success
+                localStorage.removeItem('access_token');
+                window.location.href = 'login.html';
+            }
         }
 
         function switchView(viewId, element) {
