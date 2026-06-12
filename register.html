@@ -1835,6 +1835,7 @@
 
 
 <!-- Custom Register Script -->
+<script src="assets/js/config.js"></script>
 <script>
     document.getElementById('registerForm').addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -1852,7 +1853,7 @@
             button.innerText = 'Creating account...';
             button.disabled = true;
             
-            const response = await fetch('http://localhost:3000/auth/register', {
+            const response = await fetch(ENV.API_URL + '/auth/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })

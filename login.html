@@ -389,6 +389,7 @@
 
 
 <!-- Custom Login Script -->
+<script src="assets/js/config.js"></script>
 <script>
     document.getElementById('loginForm').addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -400,7 +401,7 @@
             button.innerText = 'Signing in...';
             button.disabled = true;
             
-            const response = await fetch('http://localhost:3000/auth/login', {
+            const response = await fetch(ENV.API_URL + '/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })

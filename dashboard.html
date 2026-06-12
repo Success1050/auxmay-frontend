@@ -230,6 +230,7 @@
         </div>
     </main>
 
+    <script src="assets/js/config.js"></script>
     <script>
         // Authentication check and data fetch
         document.addEventListener('DOMContentLoaded', async () => {
@@ -240,7 +241,7 @@
             }
 
             try {
-                const response = await fetch('http://localhost:3000/user/dashboard', {
+                const response = await fetch(ENV.API_URL + '/user/dashboard', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
 
