@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axumay Cryptos | Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="assets/uploads/logo/logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/d4af37/000000?text=AX'">
+            <div class="logo-text">AXUMAY<br>ADMIN</div>
+        </div>
+        
+        <ul class="menu" style="margin-top: 30px;">
+            <li class="menu-item active" onclick="switchView('deposits', this)">
+                <i class="fa-solid fa-file-invoice-dollar"></i> DEPOSITS
+            </li>
+            <li class="menu-item" onclick="switchView('fund', this)">
+                <i class="fa-solid fa-wallet"></i> FUND USER
+            </li>
+            <li class="menu-item" onclick="switchView('investments', this)">
+                <i class="fa-solid fa-chart-line"></i> INVESTMENTS
+            </li>
+            <li class="menu-item" onclick="switchView('withdrawals', this)">
+                <i class="fa-solid fa-money-bill-transfer"></i> WITHDRAWALS
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <div class="topbar-icons">
+                <i class="fa-solid fa-sign-out-alt" style="margin-left:10px; cursor:pointer;" onclick="logout()" title="Logout"></i>
+                <div class="profile-icon"></div>
+                <i class="fa-solid fa-bars" onclick="toggleSidebar()"></i>
+            </div>
+        </header>
+
+        <div class="content-area">
+            
+            <!-- Deposits View -->
+            <div id="deposits" class="view active">
+                <h1 class="section-title">Pending Deposits</h1>
+                <table class="custom-table" id="depositsTable">
+                    <thead>
+                        <tr>
+                            <th>User Email</th>
+                            <th>Date</th>
+                            <th>Screenshot</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Fund User View -->
+            <div id="fund" class="view">
+                <h1 class="section-title">Fund User Wallet</h1>
+                <div class="stat-card" style="background: #1a1a1a; max-width: 500px;">
+                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Manually add funds to a user's main balance.</p>
+                    <input type="email" id="fundEmail" placeholder="User Email" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 10px;">
+                    <input type="number" id="fundAmount" placeholder="Amount to add (USD)" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                    <button class="btn-primary" onclick="fundUser()" style="width: 100%;">Fund Wallet</button>
+                </div>
+            </div>
+
+            <!-- Investments View -->
+            <div id="investments" class="view">
+                <h1 class="section-title">Active Investments (Compound)</h1>
+                <table class="custom-table" id="investmentsTable">
+                    <thead>
+                        <tr>
+                            <th>User Email</th>
+                            <th>Plan</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Withdrawals View -->
+            <div id="withdrawals" class="view">
+                <h1 class="section-title">Pending Withdrawals</h1>
+                <table class="custom-table" id="withdrawalsTable">
+                    <thead>
+                        <tr>
+                            <th>User Email</th>
+                            <th>Amount</th>
+                            <th>BTC Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const token = localStorage.getItem('access_token');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+            loadAdminData();
+        });
+
+        async function loadAdminData() {
+            const token = localStorage.getItem('access_token');
+            const headers = { 'Authorization': `Bearer ${token}` };
+
+            try {
+                // Load Deposits
+                const depRes = await fetch(ENV.API_URL + '/admin/deposits', { headers });
+                const deposits = await depRes.json();
+                document.getElementById('depositsTable').querySelector('tbody').innerHTML = deposits.map(d => `
+                    <tr>
+                        <td>${d.user.email}</td>
+                        <td>${new Date(d.createdAt).toLocaleDateString()}</td>
+                        <td><a href="${d.screenshotUrl}" target="_blank" style="color:var(--gold)">View Image</a></td>
+                    </tr>
+                `).join('');
+
+                // Load Investments
+                const invRes = await fetch(ENV.API_URL + '/admin/investments', { headers });
+                const investments = await invRes.json();
+                document.getElementById('investmentsTable').querySelector('tbody').innerHTML = investments.map(i => `
+                    <tr>
+                        <td>${i.user.email}</td>
+                        <td>${i.plan.name}</td>
+                        <td>$${i.amount}</td>
+                        <td>
+                            <button class="btn-primary" style="padding: 5px 10px; font-size: 12px;" onclick="compound('${i.id}')">Compound</button>
+                        </td>
+                    </tr>
+                `).join('');
+
+                // Load Withdrawals
+                const withRes = await fetch(ENV.API_URL + '/admin/withdrawals', { headers });
+                const withdrawals = await withRes.json();
+                document.getElementById('withdrawalsTable').querySelector('tbody').innerHTML = withdrawals.map(w => `
+                    <tr>
+                        <td>${w.user.email}</td>
+                        <td>$${w.amount}</td>
+                        <td>${w.btcAddress}</td>
+                        <td>
+                            <button class="btn-primary" style="padding: 5px 10px; font-size: 12px; background: #28a745; border-color: #28a745" onclick="processWithdrawal('${w.id}', 'APPROVE')">Mark Sent</button>
+                            <button class="btn-primary" style="padding: 5px 10px; font-size: 12px; background: #dc3545; border-color: #dc3545" onclick="processWithdrawal('${w.id}', 'REJECT')">Reject</button>
+                        </td>
+                    </tr>
+                `).join('');
+            } catch (err) {
+                console.error(err);
+                alert('Failed to load admin data. Are you an admin?');
+            }
+        }
+
+        async function fundUser() {
+            const email = document.getElementById('fundEmail').value;
+            const amount = document.getElementById('fundAmount').value;
+            if(!email || !amount) return alert('Enter email and amount');
+            
+            try {
+                const res = await fetch(ENV.API_URL + '/admin/fund-user', {
+                    method: 'POST',
+                    headers: { 
+                        'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, amount: Number(amount) })
+                });
+                if(!res.ok) throw new Error('Failed to fund');
+                alert('User wallet funded successfully!');
+                document.getElementById('fundEmail').value = '';
+                document.getElementById('fundAmount').value = '';
+            } catch(e) { alert(e.message); }
+        }
+
+        async function compound(investmentId) {
+            const amount = prompt("Enter the amount of interest to add to this user's balance:");
+            if(!amount) return;
+            const isMaturity = confirm("Is this plan maturing today? (If yes, this will also return their capital and close the plan)");
+            
+            try {
+                const res = await fetch(ENV.API_URL + '/admin/compound', {
+                    method: 'POST',
+                    headers: { 
+                        'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ investmentId, amount: Number(amount), isMaturity })
+                });
+                if(!res.ok) throw new Error('Failed to compound');
+                alert('Compounded successfully!');
+                loadAdminData();
+            } catch(e) { alert(e.message); }
+        }
+
+        async function processWithdrawal(withdrawalId, action) {
+            if(!confirm(`Are you sure you want to ${action} this withdrawal?`)) return;
+            try {
+                const res = await fetch(ENV.API_URL + '/admin/process-withdrawal', {
+                    method: 'POST',
+                    headers: { 
+                        'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ withdrawalId, action })
+                });
+                if(!res.ok) throw new Error('Failed to process');
+                alert(`Withdrawal ${action}D successfully!`);
+                loadAdminData();
+            } catch(e) { alert(e.message); }
+        }
+
+        function logout() {
+            localStorage.removeItem('access_token');
+            window.location.href = 'login.html';
+        }
+
+        function switchView(viewId, element) {
+            document.querySelectorAll('.view').forEach(view => view.classList.remove('active'));
+            document.getElementById(viewId).classList.add('active');
+            document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+            if(window.innerWidth <= 768) {
+                document.getElementById('sidebar').classList.remove('open');
+            }
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

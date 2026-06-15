@@ -49,6 +49,9 @@
             <li class="menu-item" onclick="switchView('add-funds', this)">
                 <i class="fa-solid fa-sack-dollar"></i> ADD FUND
             </li>
+            <li class="menu-item" onclick="switchView('withdraw', this)">
+                <i class="fa-solid fa-money-bill-transfer"></i> WITHDRAW
+            </li>
             <li class="menu-item" onclick="switchView('directors', this)">
                 <i class="fa-solid fa-users"></i> DIRECTORS
             </li>
@@ -199,10 +202,37 @@
                     
                     <div class="wallet-address">bc1qeqeru3j3arlenmvazcnf40cz7lv5lhsl0pym07</div>
                     
-                    <p class="vip-text" style="margin-bottom: 0;">
-                        Give us your bitcoin wallet address for the VIP Bonus deposit.<br>
-                        Discover our vision for the future of crypto trading!
+                    <p class="vip-text" style="margin-bottom: 20px;">
+                        After making your payment, please upload a screenshot of your transaction below for confirmation.
                     </p>
+
+                    <div style="background: var(--card-bg); padding: 20px; border-radius: 10px; border: 1px solid var(--border-color); text-align: left;">
+                        <label style="color: var(--text-secondary); display: block; margin-bottom: 10px;">Payment Screenshot</label>
+                        <input type="file" id="depositScreenshot" accept="image/*" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <button class="btn-primary" onclick="submitDeposit()" id="depositBtn">Submit For Approval</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Withdraw View -->
+            <div id="withdraw" class="view">
+                <h1 class="section-title">Withdraw Funds</h1>
+                
+                <div class="stat-cards" style="grid-template-columns: 1fr 1fr; margin-bottom: 30px;">
+                    <div class="stat-card" style="background: #1a1a1a;">
+                        <h3 style="color: var(--gold); margin-bottom: 15px;">Transfer Interest</h3>
+                        <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">Move funds from your Interest Balance to your Main Balance to withdraw them.</p>
+                        <input type="number" id="transferAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <button class="btn-primary" onclick="transferInterest()" style="width: 100%;">Transfer to Main Balance</button>
+                    </div>
+
+                    <div class="stat-card" style="background: #1a1a1a;">
+                        <h3 style="color: var(--gold); margin-bottom: 15px;">Request Withdrawal</h3>
+                        <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">Withdraw funds from your Main Balance to your Bitcoin Wallet.</p>
+                        <input type="number" id="withdrawAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 10px;">
+                        <input type="text" id="withdrawAddress" placeholder="Your BTC Wallet Address" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <button class="btn-primary" onclick="requestWithdrawal()" style="width: 100%;">Submit Withdrawal</button>
+                    </div>
                 </div>
             </div>
 
@@ -313,6 +343,86 @@
 
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        async function submitDeposit() {
+            const btn = document.getElementById('depositBtn');
+            const fileInput = document.getElementById('depositScreenshot');
+            if (!fileInput.files[0]) return alert('Please select a screenshot first.');
+
+            btn.innerText = 'Uploading...';
+            btn.disabled = true;
+
+            const formData = new FormData();
+            formData.append('screenshot', fileInput.files[0]);
+
+            const token = localStorage.getItem('access_token');
+            try {
+                const res = await fetch(ENV.API_URL + '/user/deposit', {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${token}` },
+                    body: formData
+                });
+                if (!res.ok) throw new Error('Upload failed');
+                alert('Deposit submitted! Please wait for Admin approval.');
+                fileInput.value = '';
+            } catch (err) {
+                alert(err.message);
+            } finally {
+                btn.innerText = 'Submit For Approval';
+                btn.disabled = false;
+            }
+        }
+
+        async function transferInterest() {
+            const amount = document.getElementById('transferAmount').value;
+            if (!amount || amount <= 0) return alert('Enter a valid amount');
+
+            const token = localStorage.getItem('access_token');
+            try {
+                const res = await fetch(ENV.API_URL + '/user/transfer-interest', {
+                    method: 'POST',
+                    headers: { 
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ amount: Number(amount) })
+                });
+                
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.message || 'Transfer failed');
+                
+                alert('Interest transferred to main balance!');
+                location.reload();
+            } catch (err) {
+                alert(err.message);
+            }
+        }
+
+        async function requestWithdrawal() {
+            const amount = document.getElementById('withdrawAmount').value;
+            const btcAddress = document.getElementById('withdrawAddress').value;
+            if (!amount || amount <= 0 || !btcAddress) return alert('Enter a valid amount and BTC address');
+
+            const token = localStorage.getItem('access_token');
+            try {
+                const res = await fetch(ENV.API_URL + '/user/withdraw', {
+                    method: 'POST',
+                    headers: { 
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ amount: Number(amount), btcAddress })
+                });
+                
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.message || 'Withdrawal failed');
+                
+                alert('Withdrawal requested successfully! Balance deducted.');
+                location.reload();
+            } catch (err) {
+                alert(err.message);
+            }
         }
     </script>
 </body>
