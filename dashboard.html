@@ -154,7 +154,7 @@
             <!-- Invest History View -->
             <div id="invest-history" class="view">
                 <h1 class="section-title">Invest History</h1>
-                <table class="custom-table">
+                <table class="custom-table" id="investHistoryTable">
                     <thead>
                         <tr>
                             <th>Plan</th>
@@ -164,24 +164,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Basic Plan</td>
-                            <td>$150.00</td>
-                            <td style="color: #28a745;">Active</td>
-                            <td>12 Hours</td>
-                        </tr>
-                        <tr>
-                            <td>Premium Plan</td>
-                            <td>$1,200.00</td>
-                            <td style="color: #ffc107;">Pending</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Basic Plan</td>
-                            <td>$100.00</td>
-                            <td style="color: var(--text-secondary);">Completed</td>
-                            <td>-</td>
-                        </tr>
+                        <!-- Populated by JS -->
                     </tbody>
                 </table>
             </div>
@@ -294,6 +277,32 @@
                     document.getElementById('cardInterestBalance').innerText = `$${parseFloat(data.balance.interestBalance).toFixed(2)}`;
                     document.getElementById('cardTotalDeposit').innerText = `$${parseFloat(data.balance.totalDeposit).toFixed(2)}`;
                     document.getElementById('cardTotalEarn').innerText = `$${parseFloat(data.balance.totalEarn).toFixed(2)}`;
+                }
+
+                // Update Invest History
+                if (data.investments && data.investments.length > 0) {
+                    document.getElementById('investHistoryTable').querySelector('tbody').innerHTML = data.investments.map(inv => {
+                        let statusColor = '#28a745';
+                        if(inv.status === 'PENDING') statusColor = '#ffc107';
+                        if(inv.status === 'COMPLETED') statusColor = 'var(--text-secondary)';
+                        
+                        let nextPayout = '-';
+                        if(inv.status === 'ACTIVE' && inv.nextPayoutDate) {
+                            const hours = Math.round((new Date(inv.nextPayoutDate) - new Date()) / (1000 * 60 * 60));
+                            nextPayout = hours > 0 ? `${hours} Hours` : 'Due';
+                        }
+
+                        return `
+                        <tr>
+                            <td>${inv.plan.name}</td>
+                            <td>$${inv.amount}</td>
+                            <td style="color: ${statusColor};">${inv.status}</td>
+                            <td>${nextPayout}</td>
+                        </tr>
+                        `;
+                    }).join('');
+                } else {
+                    document.getElementById('investHistoryTable').querySelector('tbody').innerHTML = `<tr><td colspan="4" style="text-align: center;">No investments found.</td></tr>`;
                 }
 
             } catch (error) {
