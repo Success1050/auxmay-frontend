@@ -421,6 +421,13 @@
             const btcAddress = document.getElementById('withdrawAddress').value;
             if (!amount || amount <= 0 || !btcAddress) return alert('Enter a valid amount and BTC address');
 
+            // Enforce Main Balance Limit
+            const currentMainBalanceStr = document.getElementById('cardMainBalance').innerText.replace(/[^0-9.-]+/g,"");
+            const currentMainBalance = parseFloat(currentMainBalanceStr) || 0;
+            if (Number(amount) > currentMainBalance) {
+                return alert(`Insufficient funds! Your Main Balance is only $${currentMainBalance.toFixed(2)}. You cannot withdraw from your Interest Balance directly.`);
+            }
+
             const token = localStorage.getItem('access_token');
             try {
                 const res = await fetch(ENV.API_URL + '/user/withdraw', {
