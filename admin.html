@@ -158,6 +158,8 @@
 
     <script src="assets/js/config.js"></script>
     <script>
+        let userChartInstance = null;
+
         document.addEventListener('DOMContentLoaded', async () => {
             const token = localStorage.getItem('access_token');
             if (!token) {
@@ -265,8 +267,12 @@
                 }
             });
 
+            if (userChartInstance) {
+                userChartInstance.destroy();
+            }
+
             const ctx = document.getElementById('userChart').getContext('2d');
-            new Chart(ctx, {
+            userChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: Object.keys(counts),
