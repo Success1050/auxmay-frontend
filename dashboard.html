@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axumay Cryptos | User Dashboard</title>
+    <title>CoinEx Cryptos | User Dashboard</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
@@ -54,6 +54,9 @@
             </li>
             <li class="menu-item" onclick="switchView('directors', this)">
                 <i class="fa-solid fa-users"></i> DIRECTORS
+            </li>
+            <li class="menu-item" id="adminMenuLink" style="display: none;" onclick="window.location.href='admin.html'">
+                <i class="fa-solid fa-lock"></i> ADMIN PANEL
             </li>
         </ul>
     </aside>
@@ -277,6 +280,11 @@
                     document.getElementById('cardInterestBalance').innerText = `$${parseFloat(data.balance.interestBalance).toFixed(2)}`;
                     document.getElementById('cardTotalDeposit').innerText = `$${parseFloat(data.balance.totalDeposit).toFixed(2)}`;
                     document.getElementById('cardTotalEarn').innerText = `$${parseFloat(data.balance.totalEarn).toFixed(2)}`;
+                }
+
+                // Show Admin Panel Link if user is Admin
+                if (data.isAdmin) {
+                    document.getElementById('adminMenuLink').style.display = 'block';
                 }
 
                 // Update Invest History
