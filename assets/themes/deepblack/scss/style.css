@@ -597,7 +597,7 @@ a.gold-btn {
 }
 
 .faq-section .accordion-button::after {
-    background-image: url(../img/icon/chevron.png);
+    background-color: #0a1128 !important; background-image: none !important;
 }
 
 .accordion-header.isRtl .accordion-button::after {
@@ -723,7 +723,7 @@ a.gold-btn {
     bottom: 0;
     right: -85%;
     margin: auto;
-    background: url(../img/icon/right-arrow2.png);
+    background: #0a1128 !important;
 }
 
 .commission-section .isRtl.box::after {
@@ -1434,7 +1434,7 @@ a.gold-btn {
 
 .page-banner {
     text-align: center;
-    /* background: url(../img/wallpapersden.com_k-planet-earth_3840x21602.jpg); */
+    /* background: #0a1128 !important; */
     background-size: cover;
     background-position: center left;
 }
@@ -2515,7 +2515,7 @@ a.gold-btn {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
-    background: url(../img/Star_Universe_Earth_Moon_HD_Space_2880x1800.jpg);
+    background: #0a1128 !important;
     background-size: cover;
     background-position: center;
     -webkit-transition: 0.4s;
