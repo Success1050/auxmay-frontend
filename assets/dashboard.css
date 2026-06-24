@@ -1,12 +1,12 @@
 :root {
-  --bg-color: #0a1128;
-  --sidebar-bg: #1a1a1a;
-  --card-bg: #222222;
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --gold: #d4af37;
-  --gold-hover: #f2c84b;
-  --border-color: #333333;
+  --bg-color: #f0f4f8;
+  --sidebar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --gold: #0ea5e9;
+  --gold-hover: #38bdf8;
+  --border-color: #e2e8f0;
 }
 
 * {
@@ -33,6 +33,7 @@ body {
   position: fixed;
   height: 100vh;
   overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(14, 165, 233, 0.06);
 }
 
 .logo-container {
@@ -98,7 +99,7 @@ body {
 
 .btn-sidebar {
   flex: 1;
-  background: linear-gradient(135deg, #f2c84b 0%, #b8860b 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
   color: #000;
   border: none;
   padding: 8px;
@@ -136,7 +137,7 @@ body {
 
 .menu-item:hover, .menu-item.active {
   color: var(--gold);
-  background: rgba(212, 175, 55, 0.05);
+  background: rgba(14, 165, 233, 0.08);
   border-left-color: var(--gold);
 }
 
@@ -177,7 +178,7 @@ body {
 .profile-icon {
   width: 35px;
   height: 35px;
-  background: #fff;
+  background: #0ea5e9;
   border-radius: 50%;
 }
 
@@ -207,6 +208,7 @@ body {
   text-align: center;
   border: 1px solid var(--border-color);
   transition: transform 0.3s;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.08);
 }
 
 .stat-card:hover {
@@ -220,7 +222,7 @@ body {
   align-items: center;
   width: 60px;
   height: 60px;
-  background: #111;
+  background: #e0f2fe;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   margin-bottom: 15px;
 }
@@ -339,7 +341,7 @@ body {
 }
 
 .custom-table th {
-  background-color: #1a1a1a;
+  background-color: #f0f9ff;
   color: var(--gold);
   font-weight: 600;
 }
@@ -381,7 +383,7 @@ body {
 }
 
 .wallet-address {
-  background: #111;
+  background: #f0f9ff;
   padding: 15px;
   border-radius: 5px;
   border: 1px dashed var(--gold);

@@ -9,8 +9,8 @@
 }
 
 body {
-    background: #000;
-    color: #FFFFFF;
+    background: #f0f4f8;
+    color: #1e293b;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 1.6em;
@@ -22,7 +22,7 @@ body {
 .golden-text,
 h1,
 h2 {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -35,7 +35,7 @@ h5 {
     font-family: "Teko", sans-serif;
     text-transform: capitalize;
     font-weight: 600;
-    color: #f7f7f8;
+    color: #1e293b;
 }
 
 h1 {
@@ -80,7 +80,7 @@ p {
     font-weight: 600;
     color: #000;
     border: none;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     display: inline-block;
     text-align: center;
     width: 155px;
@@ -97,7 +97,7 @@ p {
     font-weight: 600;
     color: #000;
     border: none;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -138,7 +138,7 @@ a.gold-btn {
 .header-text h5 {
     text-transform: uppercase;
     font-weight: 600;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: auto;
@@ -147,7 +147,7 @@ a.gold-btn {
 .header-text-full p,
 .header-text p {
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     margin-bottom: 15px;
 }
 
@@ -180,7 +180,7 @@ a.gold-btn {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -192,7 +192,7 @@ a.gold-btn {
     content: "";
     width: 0px;
     height: 2px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     bottom: 0;
     left: 0;
     right: 0;
@@ -271,12 +271,12 @@ a.gold-btn {
 }
 
 .navbar .navbar-text .notification-panel .dropdown-box::-webkit-scrollbar-track {
-    background: #222;
+    background: #ffffff;
     border-radius: 100px;
 }
 
 .navbar .navbar-text .notification-panel .dropdown-box::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(14, 165, 233, 0.06);
     border-radius: 6px;
 }
 
@@ -285,7 +285,7 @@ a.gold-btn {
 }
 
 .navbar .navbar-text .notification-panel .notification-dropdown {
-    background: #222;
+    background: #ffffff;
     width: 300px;
     overflow: hidden;
     padding-bottom: 40px;
@@ -299,13 +299,13 @@ a.gold-btn {
 }
 
 .navbar .navbar-text .notification-panel .notification-dropdown li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #e2e8f0;
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 
 .navbar .navbar-text .notification-panel .notification-dropdown li a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     font-weight: 400;
     padding: 10px 10px 15px 15px;
     display: -webkit-box;
@@ -320,7 +320,7 @@ a.gold-btn {
 }
 
 .navbar .navbar-text .notification-panel .notification-dropdown li a i {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 2px solid #bf953f;
@@ -345,7 +345,7 @@ a.gold-btn {
 }
 
 .navbar .navbar-text .notification-panel .notification-dropdown li:hover {
-    background: #000;
+    background: #f0f4f8;
 }
 
 .navbar .navbar-text .notification-panel .notification-dropdown li:first-child {
@@ -355,9 +355,9 @@ a.gold-btn {
 
 
 .navbar .navbar-text .notification-panel .notification-dropdown .clear-all {
-    background: #222;
+    background: #ffffff;
     text-transform: uppercase;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid #e2e8f0;
     font-family: "Teko", sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -394,11 +394,11 @@ a.gold-btn {
 }
 
 .navbar.active {
-    background: #000;
+    background: #f0f4f8;
 }
 
 .home-banner .overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(240, 244, 248, 0.95);
 }
 
 .home-banner h1 span {
@@ -423,7 +423,7 @@ a.gold-btn {
 .feature-section .box {
     padding: 30px;
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     text-align: center;
     border: 2px solid transparent;
@@ -432,7 +432,7 @@ a.gold-btn {
 .feature-section .box .img-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     padding: 15px;
@@ -454,7 +454,7 @@ a.gold-btn {
 }
 
 .feature-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -482,16 +482,16 @@ a.gold-btn {
     bottom: 0;
     margin: auto;
     left: -15px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     z-index: -1;
 }
 
 .about-section .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     text-align: center;
     display: -webkit-box;
@@ -509,7 +509,7 @@ a.gold-btn {
 .about-section .box .icon-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     padding: 20px;
@@ -521,7 +521,7 @@ a.gold-btn {
 }
 
 .about-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -533,7 +533,7 @@ a.gold-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px;
     border: 2px solid transparent;
@@ -543,7 +543,7 @@ a.gold-btn {
     margin-right: 15px;
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     text-align: center;
@@ -557,7 +557,7 @@ a.gold-btn {
 }
 
 .choose-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -566,7 +566,7 @@ a.gold-btn {
 }
 
 .faq-section .accordion-item {
-    background: #222;
+    background: #ffffff;
     border: none;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -577,12 +577,12 @@ a.gold-btn {
 }
 
 .faq-section .accordion-button {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px !important;
     padding: 20px 30px;
     font-size: 24px;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: auto;
@@ -597,7 +597,7 @@ a.gold-btn {
 }
 
 .faq-section .accordion-button::after {
-    background-color: #0a1128 !important; background-image: none !important;
+    background-color: #f0f4f8 !important; background-image: none !important;
 }
 
 .accordion-header.isRtl .accordion-button::after {
@@ -612,12 +612,12 @@ a.gold-btn {
 .faq-section .accordion-body p {
     margin-bottom: 0;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .faq-section .accordion-button:not(.collapsed) {
-    color: #fff;
-    background-color: #222;
+    color: #1e293b;
+    background-color: #1e293b;
     -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
@@ -630,7 +630,7 @@ a.gold-btn {
 
 .pricing-section .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     border: 2px solid transparent;
     text-align: center;
@@ -638,7 +638,7 @@ a.gold-btn {
 }
 
 .pricing-section .box h1 {
-    color: #faaf3a;
+    color: #0ea5e9;
     margin-bottom: 0;
 }
 
@@ -669,7 +669,7 @@ a.gold-btn {
     content: "";
     width: 120%;
     height: 100%;
-    background: #000;
+    background: #f0f4f8;
     right: 0;
     top: 0;
     border-radius: 100px;
@@ -677,7 +677,7 @@ a.gold-btn {
 }
 
 .pricing-section .box .amount {
-    color: #faaf3a;
+    color: #0ea5e9;
 }
 
 .pricing-section .box .gold-btn {
@@ -687,7 +687,7 @@ a.gold-btn {
 }
 
 .pricing-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -703,7 +703,7 @@ a.gold-btn {
     height: 180px;
     margin: auto;
     position: relative;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-radius: 200px;
     -webkit-box-shadow: inset 0 0 0px 20px #000;
@@ -723,7 +723,7 @@ a.gold-btn {
     bottom: 0;
     right: -85%;
     margin: auto;
-    background: #0a1128 !important;
+    background: #f0f4f8 !important;
 }
 
 .commission-section .isRtl.box::after {
@@ -773,9 +773,9 @@ a.gold-btn {
     bottom: 0;
     margin: auto;
     left: -15px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     z-index: -1;
 }
@@ -784,7 +784,7 @@ a.gold-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px;
     border: 2px solid transparent;
@@ -794,7 +794,7 @@ a.gold-btn {
     margin-right: 15px;
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     text-align: center;
@@ -807,7 +807,7 @@ a.gold-btn {
 }
 
 .certification-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -818,7 +818,7 @@ a.gold-btn {
 .statistic-section .box {
     padding: 30px;
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     text-align: center;
     border: 2px solid transparent;
@@ -827,7 +827,7 @@ a.gold-btn {
 .statistic-section .box .img-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     padding: 15px;
@@ -849,7 +849,7 @@ a.gold-btn {
 }
 
 .statistic-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -860,7 +860,7 @@ a.gold-btn {
 .testimonial-section .review-box {
     -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px 30px;
     text-align: left;
@@ -912,7 +912,7 @@ a.gold-btn {
 
 .testimonial-section .review-box .text-box p {
     margin-bottom: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     font-size: 14px;
 }
 
@@ -924,7 +924,7 @@ a.gold-btn {
     text-align: center;
     -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px 30px;
     position: relative;
@@ -954,7 +954,7 @@ a.gold-btn {
 
 .investor-section .investor-box p {
     margin-bottom: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     font-size: 14px;
 }
 .how-it-works {
@@ -965,7 +965,7 @@ a.gold-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px;
     border: 2px solid transparent;
@@ -981,13 +981,13 @@ a.gold-btn {
     font-family: "Teko", sans-serif;
     text-transform: capitalize;
     font-weight: 500;
-    color: #f7f7f8;
+    color: #1e293b;
     right: -94px;
     padding: 17px;
     text-align: center;
     width: 60px;
     height: 60px;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-radius: 200px;
     -webkit-box-shadow: inset 0 0 0px 10px #000;
@@ -1002,7 +1002,7 @@ a.gold-btn {
     height: 134px;
     right: -65px;
     top: 90px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
 }
 
 .how-it-works .box.box-last::after {
@@ -1013,7 +1013,7 @@ a.gold-btn {
     margin: 0;
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     display: inline-block;
@@ -1031,7 +1031,7 @@ a.gold-btn {
 }
 
 .how-it-works .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 .how-it-works.rtl {
@@ -1043,7 +1043,7 @@ a.gold-btn {
 }
 
 .calculation-section .input-group {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1053,7 +1053,7 @@ a.gold-btn {
     width: 52px;
     height: 56px;
     padding: 17px;
-    background: #222;
+    background: #ffffff;
     position: absolute;
     border-radius: 10px;
     left: 3px;
@@ -1071,8 +1071,8 @@ a.gold-btn {
     border: 2px solid #222;
     border-left: 3px solid #222;
     border-radius: 10px !important;
-    background: #222;
-    color: #f7f7f8;
+    background: #ffffff;
+    color: #1e293b;
     font-size: 14px;
     padding: 18px;
     padding-left: 54px;
@@ -1081,36 +1081,36 @@ a.gold-btn {
 
 .calculation-section .input-group .form-select::-webkit-input-placeholder,
 .calculation-section .input-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .calculation-section .input-group .form-select:-ms-input-placeholder,
 .calculation-section .input-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .calculation-section .input-group .form-select::-ms-input-placeholder,
 .calculation-section .input-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .calculation-section .input-group .form-select::placeholder,
 .calculation-section .input-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .calculation-section .input-group .form-select:focus,
 .calculation-section .input-group .form-control:focus {
-    background: #222;
+    background: #ffffff;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #222;
     box-shadow: 0 0 0 0rem #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -1154,21 +1154,21 @@ a.gold-btn {
 .transaction-section .box {
     padding: 30px;
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     text-align: center;
     border: 2px solid transparent;
 }
 
 .transaction-section .box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
 .transaction-section .box .img-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     padding: 15px;
@@ -1198,7 +1198,7 @@ a.gold-btn {
     padding: 0 20px;
     height: 45px;
     margin: 5px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 2px solid #bf953f;
@@ -1207,7 +1207,7 @@ a.gold-btn {
 }
 
 .transaction-section .button-group button:hover, .transaction-section .button-group button.active {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     color: #000;
     -webkit-text-fill-color: #000;
 }
@@ -1224,14 +1224,14 @@ a.gold-btn {
 }
 
 .newsletter-section .input-group .form-control {
-    background: #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: #ffffff;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-right: none;
     border-radius: 0px;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
-    color: #fff;
+    color: #1e293b;
     font-size: 14px;
     padding: 12px;
     padding-left: 18px;
@@ -1259,12 +1259,12 @@ a.gold-btn {
 }
 
 .newsletter-section .input-group .form-control:focus {
-    background: #222;
+    background: #ffffff;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #222;
     box-shadow: 0 0 0 0rem #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-right: none;
 }
@@ -1274,7 +1274,7 @@ a.gold-btn {
 }
 
 .blog-section .blog-box {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -1293,7 +1293,7 @@ a.gold-btn {
 }
 
 .blog-section .blog-box .text-box p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     margin-bottom: 0;
 }
 
@@ -1302,7 +1302,7 @@ a.gold-btn {
     font-size: 14px;
     display: inline-block;
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .partner-section {
@@ -1333,7 +1333,7 @@ a.gold-btn {
 
 .footer .footer-box p,
 .footer .footer-box span {
-    color: #f7f7f8;
+    color: #1e293b;
 }
 
 .footer .footer-box h4 {
@@ -1352,7 +1352,7 @@ a.gold-btn {
 }
 
 .footer .footer-box ul li a {
-    color: #f7f7f8;
+    color: #1e293b;
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -1378,7 +1378,7 @@ a.gold-btn {
 }
 
 .footer .social-links a i {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: 2px solid #bf953f;
@@ -1397,7 +1397,7 @@ a.gold-btn {
 .footer .copyright span,
 .footer .copyright a,
 .footer .copyright p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .footer .copyright a {
@@ -1412,7 +1412,7 @@ a.gold-btn {
 }
 
 #preloader {
-    background: #000;
+    background: #f0f4f8;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1434,13 +1434,13 @@ a.gold-btn {
 
 .page-banner {
     text-align: center;
-    /* background: #0a1128 !important; */
+    /* background: #f0f4f8 !important; */
     background-size: cover;
     background-position: center left;
 }
 
 .page-banner .overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(240, 244, 248, 0.95);
     padding: 150px 0 100px 0;
 }
 
@@ -1459,10 +1459,10 @@ a.gold-btn {
     padding: 50px;
     max-width: 550px;
     margin: auto;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     /* text-align: center; */
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -1470,10 +1470,10 @@ a.gold-btn {
     padding: 50px;
     max-width: 850px;
     margin: auto;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     /* text-align: center; */
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -1495,7 +1495,7 @@ a.gold-btn {
 }
 
 .login-section .login-box .input-group {
-    background: #000;
+    background: #f0f4f8;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1505,7 +1505,7 @@ a.gold-btn {
     width: 52px;
     height: 56px;
     padding: 17px;
-    background: #000;
+    background: #f0f4f8;
     position: absolute;
     border-radius: 10px;
     left: 3px;
@@ -1522,8 +1522,8 @@ a.gold-btn {
     border: 2px solid #000;
     border-left: 3px solid #000;
     border-radius: 10px !important;
-    background: #000;
-    color: #f7f7f8;
+    background: #f0f4f8;
+    color: #1e293b;
     font-size: 14px;
     padding: 20px;
     padding-left: 54px;
@@ -1531,32 +1531,32 @@ a.gold-btn {
 }
 
 .login-section .login-box .input-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .login-section .login-box .input-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .login-section .login-box .input-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .login-section .login-box .input-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .login-section .login-box .input-group .form-control:focus {
-    background: #000;
+    background: #f0f4f8;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #000;
     box-shadow: 0 0 0 0rem #000;
-    background: linear-gradient(#000 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#1e293b 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -1580,7 +1580,7 @@ a.gold-btn {
 
 .login-section .login-box .bottom .form-check {
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 400;
@@ -1609,7 +1609,7 @@ a.gold-btn {
 
 .login-section .login-box .bottom p {
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 400;
@@ -1623,7 +1623,7 @@ a.gold-btn {
 
 .login-section .login-box p {
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     margin-bottom: 0;
     font-size: 13px;
     margin-bottom: 0;
@@ -1651,7 +1651,7 @@ a.gold-btn {
     margin-right: 15px;
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #222;
+    background: #ffffff;
     width: 80px;
     height: 65px;
     text-align: center;
@@ -1676,7 +1676,7 @@ a.gold-btn {
 }
 
 .contact-section .contact-box .input-group {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1686,7 +1686,7 @@ a.gold-btn {
     width: 52px;
     height: 56px;
     padding: 17px;
-    background: #222;
+    background: #ffffff;
     position: absolute;
     border-radius: 10px;
     left: 3px;
@@ -1703,8 +1703,8 @@ a.gold-btn {
     border: 2px solid #222;
     border-left: 3px solid #222;
     border-radius: 10px !important;
-    background: #222;
-    color: #f7f7f8;
+    background: #ffffff;
+    color: #1e293b;
     font-size: 14px;
     padding: 20px;
     padding-left: 54px;
@@ -1712,32 +1712,32 @@ a.gold-btn {
 }
 
 .contact-section .contact-box .input-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .contact-section .contact-box .input-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .contact-section .contact-box .input-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .contact-section .contact-box .input-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .contact-section .contact-box .input-group .form-control:focus {
-    background: #222;
+    background: #ffffff;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #222;
     box-shadow: 0 0 0 0rem #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -1760,7 +1760,7 @@ a.gold-btn {
 
 .contact-section .contact-box .bottom p {
     text-transform: uppercase;
-    color: #f7f7f8;
+    color: #1e293b;
     margin-bottom: 0;
     font-size: 13px;
 }
@@ -1777,11 +1777,11 @@ a.gold-btn {
 .blog-details .details-box {
     padding: 30px;
     border-radius: 10px;
-    background: #222;
+    background: #ffffff;
 }
 
 .blog-details .details-box .text-box p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     margin-bottom: 0;
 }
 
@@ -1790,14 +1790,14 @@ a.gold-btn {
     font-size: 14px;
     display: inline-block;
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .blog-details .recent-post-box {
     margin-bottom: 30px;
     padding: 15px;
     border-radius: 10px;
-    background: #222;
+    background: #ffffff;
 }
 
 .blog-details .recent-post-box .img-box {
@@ -1810,7 +1810,7 @@ a.gold-btn {
     font-size: 14px;
     display: inline-block;
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .make-deposit {
@@ -1819,7 +1819,7 @@ a.gold-btn {
 
 .make-deposit .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     text-align: center;
     display: -webkit-box;
@@ -1836,7 +1836,7 @@ a.gold-btn {
 .make-deposit .box .img-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     padding: 20px;
@@ -1852,7 +1852,7 @@ a.gold-btn {
 }
 
 .make-deposit form .input-group {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1862,7 +1862,7 @@ a.gold-btn {
     width: 56px;
     height: 56px;
     padding: 16px;
-    background: #222;
+    background: #ffffff;
     position: absolute;
     border-radius: 10px;
     left: 3px;
@@ -1875,8 +1875,8 @@ a.gold-btn {
     border: 2px solid #222;
     border-left: 3px solid #222;
     border-radius: 10px !important;
-    background: #222;
-    color: #f7f7f8;
+    background: #ffffff;
+    color: #1e293b;
     font-size: 14px;
     padding: 20px;
     padding-left: 58px;
@@ -1884,32 +1884,32 @@ a.gold-btn {
 }
 
 .make-deposit form .input-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .make-deposit form .input-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .make-deposit form .input-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .make-deposit form .input-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .make-deposit form .input-group .form-control:focus {
-    background: #222;
+    background: #ffffff;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #222;
     box-shadow: 0 0 0 0rem #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -1928,9 +1928,9 @@ a.gold-btn {
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 500;
-    color: #f7f7f8;
+    color: #1e293b;
     border: none;
-    background: linear-gradient(#000 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#1e293b 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     width: auto;
     height: 40px;
@@ -1950,7 +1950,7 @@ a.gold-btn {
 }
 
 .make-deposit form .radio-box .btn-check:checked + .btn-secondary {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     border: 2px solid transparent;
     color: #000;
 }
@@ -1962,7 +1962,7 @@ a.gold-btn {
 .make-deposit form .radio-box .btn-check:focus + .btn-secondary,
 .make-deposit form .radio-box .btn-secondary:focus {
     color: #000;
-    background-color: #fff;
+    background-color: #1e293b;
     -webkit-box-shadow: 0 0 0 0rem rgba(49, 132, 253, 0.5);
     box-shadow: 0 0 0 0rem rgba(49, 132, 253, 0.5);
 }
@@ -1976,7 +1976,7 @@ a.gold-btn {
 }
 
 .select-transaction .input-group {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -1986,7 +1986,7 @@ a.gold-btn {
     width: 52px;
     height: 56px;
     padding: 17px;
-    background: #222;
+    background: #ffffff;
     position: absolute;
     border-radius: 10px;
     left: 3px;
@@ -2004,8 +2004,8 @@ a.gold-btn {
     border: 2px solid #222;
     border-left: 3px solid #222;
     border-radius: 10px !important;
-    background: #222;
-    color: #f7f7f8;
+    background: #ffffff;
+    color: #1e293b;
     font-size: 14px;
     padding: 18px;
     padding-left: 54px;
@@ -2014,36 +2014,36 @@ a.gold-btn {
 
 .select-transaction .input-group .form-select::-webkit-input-placeholder,
 .select-transaction .input-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .select-transaction .input-group .form-select:-ms-input-placeholder,
 .select-transaction .input-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .select-transaction .input-group .form-select::-ms-input-placeholder,
 .select-transaction .input-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .select-transaction .input-group .form-select::placeholder,
 .select-transaction .input-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .select-transaction .input-group .form-select:focus,
 .select-transaction .input-group .form-control:focus {
-    background: #222;
+    background: #ffffff;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #222;
     box-shadow: 0 0 0 0rem #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -2066,7 +2066,7 @@ a.gold-btn {
 }
 
 .chart-information .progress-wrapper {
-    background: #222;
+    background: #ffffff;
     padding: 17px;
     padding-bottom: 0px;
     border-radius: 10px;
@@ -2075,7 +2075,7 @@ a.gold-btn {
 }
 
 .chart-information .progress-wrapper.progress-wrapper-circle {
-    background: #222;
+    background: #ffffff;
     padding: 30px;
     border-radius: 10px;
     height: 100%;
@@ -2087,7 +2087,7 @@ a.gold-btn {
 
 .refferal-information .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2100,7 +2100,7 @@ a.gold-btn {
 .refferal-information .box .img-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     text-align: center;
@@ -2118,17 +2118,17 @@ a.gold-btn {
 }
 
 .transaction-history .table {
-    color: #f7f7f8;
+    color: #1e293b;
     margin-bottom: 0;
 }
 
 .transaction-history .table tbody > tr:nth-of-type(odd) > * {
     --bs-table-accent-bg: #222;
-    color: #f7f7f8;
+    color: #1e293b;
 }
 
 .transaction-history .table thead {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     color: #000;
     text-transform: uppercase;
 }
@@ -2158,7 +2158,7 @@ a.gold-btn {
     height: 40px;
     text-align: center;
     margin: 0 5px;
-    background: linear-gradient(#000 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#1e293b 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 1px solid transparent;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -2169,7 +2169,7 @@ a.gold-btn {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
-    color: #fcf6ba;
+    color: #0284c7;
     background: none;
     border: none;
     border-radius: 0;
@@ -2184,17 +2184,17 @@ a.gold-btn {
 }
 
 .pagination .page-item:hover a, .pagination .page-item.active a {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     color: #000;
 }
 
 .pagination .page-item.disabled a {
     background: none;
-    color: #fcf6ba;
+    color: #0284c7;
 }
 
 .profile-setting .upload-img {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     text-align: center;
     padding: 30px;
@@ -2224,7 +2224,7 @@ a.gold-btn {
     bottom: 0;
     margin: auto;
     display: inline-block;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(14, 165, 233, 0.05);
     width: 60%;
     height: 100px;
     text-align: center;
@@ -2251,7 +2251,7 @@ a.gold-btn {
 }
 
 .profile-setting .edit-area {
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     padding: 30px;
 }
@@ -2271,7 +2271,7 @@ a.gold-btn {
 .profile-setting .edit-area .profile-navigator {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .profile-setting .edit-area .profile-navigator button {
@@ -2306,8 +2306,8 @@ a.gold-btn {
     border: 2px solid #111;
     border-left: 3px solid #111;
     border-radius: 5px !important;
-    background: #111;
-    color: #f7f7f8;
+    background: #f8fafc;
+    color: #1e293b;
     font-size: 14px;
     padding: 15px;
     z-index: 0;
@@ -2315,32 +2315,32 @@ a.gold-btn {
 
 .profile-setting .edit-area form .form-select::-webkit-input-placeholder,
 .profile-setting .edit-area form .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .profile-setting .edit-area form .form-select:-ms-input-placeholder,
 .profile-setting .edit-area form .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .profile-setting .edit-area form .form-select::-ms-input-placeholder,
 .profile-setting .edit-area form .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .profile-setting .edit-area form .form-select::placeholder,
 .profile-setting .edit-area form .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
 }
 
 .profile-setting .edit-area form .form-select:focus,
 .profile-setting .edit-area form .form-control:focus {
-    background: #111;
+    background: #f8fafc;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #111;
     box-shadow: 0 0 0 0rem #111;
-    background: linear-gradient(#111 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#f8fafc 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -2369,7 +2369,7 @@ a.gold-btn {
 }
 
 .profile-setting .edit-area .alert {
-    background: #111;
+    background: #f8fafc;
     border-radius: 10px;
 }
 
@@ -2390,7 +2390,7 @@ a.gold-btn {
 .wrapper #sidebar {
     min-width: 300px;
     max-width: 300px;
-    background: #222;
+    background: #ffffff;
     border-right: 1px solid #000;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -2419,7 +2419,7 @@ a.gold-btn {
 }
 
 .wrapper #sidebar .btn-toggle {
-    color: #fff;
+    color: #1e293b;
     width: 100%;
     text-align: left;
     text-transform: uppercase;
@@ -2429,7 +2429,7 @@ a.gold-btn {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: auto;
@@ -2461,12 +2461,12 @@ a.gold-btn {
 }
 
 .wrapper #sidebar ul::-webkit-scrollbar-track {
-    background: #222;
+    background: #ffffff;
     border-radius: 100px;
 }
 
 .wrapper #sidebar ul::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(14, 165, 233, 0.06);
     border-radius: 6px;
 }
 
@@ -2487,7 +2487,7 @@ a.gold-btn {
 }
 
 .wrapper #sidebar ul li:hover, .wrapper #sidebar ul li.active {
-    background: #000;
+    background: #f0f4f8;
 }
 
 .wrapper #sidebar ul li a {
@@ -2498,7 +2498,7 @@ a.gold-btn {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: auto;
@@ -2515,7 +2515,7 @@ a.gold-btn {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     position: relative;
-    background: #0a1128 !important;
+    background: #f0f4f8 !important;
     background-size: cover;
     background-position: center;
     -webkit-transition: 0.4s;
@@ -2523,7 +2523,7 @@ a.gold-btn {
 }
 
 #content .overlay {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(240, 244, 248, 0.95);
     padding: 20px;
     width: 100%;
     min-height: 100vh;
@@ -2535,7 +2535,7 @@ a.gold-btn {
 #content .navbar {
     position: fixed;
     top: 0;
-    background: #222;
+    background: #ffffff;
 }
 
 #content .navbar .sidebar-toggler {
@@ -2560,7 +2560,7 @@ a.gold-btn {
 }
 
 #content .badge-box {
-    background-color: #222222;
+    background-color: #ffffff;
     position: relative;
     border-radius: 10px;
     padding: 30px;
@@ -2574,7 +2574,7 @@ a.gold-btn {
     height: 100%;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(240, 244, 248, 0.9);
     z-index: 2;
     border-radius: 10px;
 }
@@ -2592,7 +2592,7 @@ a.gold-btn {
 }
 #content .badge-box.locked .lock-icon i {
     font-size: 18px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2600,7 +2600,7 @@ a.gold-btn {
     margin-bottom: 15px;
 }
 #content .badge-box h3 {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2612,7 +2612,7 @@ a.gold-btn {
 }
 #content .badge-box h5 span {
     float: right;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2632,13 +2632,13 @@ a.gold-btn {
 }
 #sidebar .wallet-box h5 span {
     float: right;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #sidebar .wallet-box h5 i {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;}
 
@@ -2646,7 +2646,7 @@ a.gold-btn {
     margin-bottom: 0;
 }
 #sidebar .wallet-box .tag {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     color: #000000;
     font-size: 12px;
     padding: 2px 6px;
@@ -2700,7 +2700,7 @@ a.gold-btn {
 /*------------ added for extra requirement ----------------*/
 .support-area .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
 }
 
@@ -2750,7 +2750,7 @@ a.gold-btn {
     width: 100px;
     height: 85%;
     border-radius: 8px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -2776,13 +2776,13 @@ a.gold-btn {
 
 .support-area .input-group2 .form-select,
 .support-area .input-group2 .form-control {
-    background: #111;
+    background: #f8fafc;
     margin-right: 15px;
     border: 2px solid #222;
     border-left: 3px solid #111;
     border-radius: 10px !important;
-    background: #111;
-    color: #f7f7f8;
+    background: #f8fafc;
+    color: #1e293b;
     font-size: 14px;
     padding: 18px;
     padding-right: 100px;
@@ -2792,37 +2792,36 @@ a.gold-btn {
 
 .support-area .input-group2 .form-select::-webkit-input-placeholder,
 .support-area .input-group2 .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .support-area .input-group2 .form-select:-ms-input-placeholder,
 .support-area .input-group2 .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .support-area .input-group2 .form-select::-ms-input-placeholder,
 .support-area .input-group2 .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .support-area .input-group2 .form-select::placeholder,
 .support-area .input-group2 .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .support-area .input-group2 .form-select:focus,
 .support-area .input-group2 .form-control:focus {
-    background: #111;
+    background: #f8fafc;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #111;
     box-shadow: 0 0 0 0rem #111;
-    background: linear-gradient(#111 0 0) padding-box,
-    linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#f8fafc 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -2840,16 +2839,16 @@ a.gold-btn {
 }
 
 .support-area .chats::-webkit-scrollbar-track {
-    background: #222;
+    background: #ffffff;
 }
 
 .support-area .chats::-webkit-scrollbar-thumb {
-    background: #222;
+    background: #ffffff;
     border-radius: 5px;
 }
 
 .support-area .chats::-webkit-scrollbar-thumb:hover {
-    background: #222;
+    background: #ffffff;
 }
 
 .support-area .chats .chat-box {
@@ -2875,7 +2874,7 @@ a.gold-btn {
 
 .support-area .chats .chat-box .text-wrapper .text {
     padding: 15px;
-    background: #111;
+    background: #f8fafc;
     border-radius: 3px;
     float: right;
     margin-bottom: 5px;
@@ -2965,7 +2964,7 @@ input:-webkit-autofill:active {
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: #1e293b !important;
 }
 
 textarea:-webkit-autofill,
@@ -2976,14 +2975,14 @@ textarea:-webkit-autofill:active {
 }
 
 textarea:-webkit-autofill {
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: #1e293b !important;
 }
 
 .navbar .navbar-text .notification-panel .dropdown-toggle .badge {
     position: relative;
     right: 10px;
     bottom: 8px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     color: #000;
     border-radius: 10px;
     line-height: 0.9;
@@ -2991,12 +2990,12 @@ textarea:-webkit-autofill {
 
 .refferal-link .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
 }
 
 .refferal-link .input-group {
-    background: #111;
+    background: #f8fafc;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -3022,8 +3021,8 @@ textarea:-webkit-autofill {
     border: 2px solid #222;
     border-left: 3px solid #111;
     border-radius: 10px !important;
-    background: #111;
-    color: #f7f7f8;
+    background: #f8fafc;
+    color: #1e293b;
     font-size: 14px;
     padding: 18px;
     padding-right: 100px;
@@ -3032,43 +3031,43 @@ textarea:-webkit-autofill {
 
 .refferal-link .input-group .form-select::-webkit-input-placeholder,
 .refferal-link .input-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .refferal-link .input-group .form-select:-ms-input-placeholder,
 .refferal-link .input-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .refferal-link .input-group .form-select::-ms-input-placeholder,
 .refferal-link .input-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .refferal-link .input-group .form-select::placeholder,
 .refferal-link .input-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: uppercase;
 }
 
 .refferal-link .input-group .form-select:focus,
 .refferal-link .input-group .form-control:focus {
-    background: #111;
+    background: #f8fafc;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #111;
     box-shadow: 0 0 0 0rem #111;
-    background: linear-gradient(#111 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#f8fafc 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
 
 .refferal-information .box {
     padding: 30px;
-    background: #222;
+    background: #ffffff;
     border-radius: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3081,7 +3080,7 @@ textarea:-webkit-autofill {
 .refferal-information .box .img-box {
     -webkit-clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
     clip-path: polygon(30% 0, 70% 0, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: #111;
+    background: #f8fafc;
     width: 80px;
     height: 65px;
     text-align: center;
@@ -3102,7 +3101,7 @@ textarea:-webkit-autofill {
 /*----------- Modal ----------*/
 .modal .modal-content {
     border-radius: 10px;
-    background: #222;
+    background: #ffffff;
 }
 
 .modal .modal-header {
@@ -3142,8 +3141,8 @@ textarea:-webkit-autofill {
     border: 2px solid #000;
     border-left: 3px solid #000;
     border-radius: 10px !important;
-    background: #000;
-    color: #f7f7f8;
+    background: #f0f4f8;
+    color: #1e293b;
     font-size: 14px;
     padding: 10px;
     z-index: 0;
@@ -3151,36 +3150,36 @@ textarea:-webkit-autofill {
 
 .modal .form-group .form-select::-webkit-input-placeholder,
 .modal .form-group .form-control::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .modal .form-group .form-select:-ms-input-placeholder,
 .modal .form-group .form-control:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .modal .form-group .form-select::-ms-input-placeholder,
 .modal .form-group .form-control::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .modal .form-group .form-select::placeholder,
 .modal .form-group .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     text-transform: capitalize;
 }
 
 .modal .form-group .form-select:focus,
 .modal .form-group .form-control:focus {
-    background: #000;
+    background: #f0f4f8;
     border-color: #86b7fe;
     outline: 0;
     -webkit-box-shadow: 0 0 0 0rem #000;
     box-shadow: 0 0 0 0rem #000;
-    background: linear-gradient(#000 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#1e293b 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-left: 3px solid transparent;
 }
@@ -3198,7 +3197,7 @@ textarea:-webkit-autofill {
 
 /*-------- payment gateway - addfund --------*/
 .payment-gateway .gateway-box {
-    background: #222;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
 }
@@ -3264,7 +3263,7 @@ textarea:-webkit-autofill {
 .blog-section .getLink-details p {
     margin: auto;
     max-width: auto;
-    color: rgba(255, 255, 255, 0.8);
+    color: #475569;
     font-size: 16px;
 }
 
@@ -3339,7 +3338,7 @@ textarea:-webkit-autofill {
 }
 
 .list-text {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 15px;
@@ -3367,7 +3366,7 @@ textarea:-webkit-autofill {
 }
 
 .payment-gateway .gateway-box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -3376,12 +3375,12 @@ textarea:-webkit-autofill {
 #investNowModal .modal-content,
 #closeTicketModal .modal-content,
 #enableModal .modal-content {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
 .blog-section .blog-box:hover {
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
 }
 
@@ -3408,7 +3407,7 @@ a.gold-btn-sm {
     font-weight: 600;
     color: #000;
     border: none;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     display: inline-block;
     text-align: center;
     width: 145px;
@@ -3424,7 +3423,7 @@ a.gold-btn-sm {
 }
 
 .btn-bg {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     font-weight: 500;
     border-radius: 25px;
     min-width: 95px;
@@ -3440,7 +3439,7 @@ a.gold-btn-sm {
 }
 
 .eye-btn {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     font-weight: 500;
 }
 
@@ -3454,7 +3453,7 @@ a.gold-btn-sm {
     background: transparent;
     margin-bottom: 20px;
     border: 1px solid #bf9844;
-    color: #fff;
+    color: #1e293b;
     transition: all .2s ease;
     display: block;
     -webkit-transition: all .2s ease;
@@ -3465,7 +3464,7 @@ a.gold-btn-sm {
 
 #ref-label .nav-link:hover,
 #ref-label .nav-link.active {
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     color: #000;
     font-weight: 500;
 }
@@ -3497,7 +3496,7 @@ a.gold-btn-sm {
     bottom: 0;
     margin: auto;
     width: 110px;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     text-align: center;
@@ -3718,7 +3717,7 @@ a.gold-btn-sm {
 @media (max-width: 991px) {
     .navbar {
         padding: 10px;
-        background: #000;
+        background: #f0f4f8;
     }
 
 
@@ -3954,13 +3953,13 @@ html[dir=rtl]  .modal-header .btn-close {
     margin: 0;
 }
 html[dir=rtl]  .newsletter-section .input-group .form-control {
-    background: #222;
-    background: linear-gradient(#222 0 0) padding-box, linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c) border-box;
+    background: #ffffff;
+    background: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1) border-box;
     border: 2px solid transparent;
     border-radius: 0px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    color: #fff;
+    color: #1e293b;
     font-size: 14px;
     padding: 12px;
     padding-right: 18px;
@@ -3973,7 +3972,7 @@ html[dir=rtl] .newsletter-section  .gold-btn {
     font-weight: 600;
     color: #000;
     border: none;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     display: inline-block;
     text-align: center;
     width: 155px;
@@ -4007,7 +4006,7 @@ html[dir=rtl] .newsletter-section  .gold-btn {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     box-sizing: border-box;
     padding: 48px;
-    color: #ffffff;
+    color: #1e293b;
 }
 
 .products {
@@ -4050,7 +4049,7 @@ html[dir=rtl] .newsletter-section  .gold-btn {
 .footer a,
 .footer a:hover  {
     color: #aa771c;
-    background: linear-gradient(135deg, #b38728, #fcf6ba, #bf953f, #fbf5b7, #aa771c);
+    background: linear-gradient(135deg, #0284c7, #38bdf8, #0ea5e9, #7dd3fc, #0369a1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Teko", sans-serif;
