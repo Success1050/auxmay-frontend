@@ -1082,7 +1082,7 @@ a.gold-btn {
     border-left: 3px solid #222;
     border-radius: 10px !important;
     background: #ffffff;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 18px;
     padding-left: 54px;
@@ -1241,7 +1241,7 @@ a.gold-btn {
     border-radius: 0px;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 12px;
     padding-left: 18px;
@@ -1529,11 +1529,11 @@ a.gold-btn {
 
 .login-section .login-box .input-group .form-control {
     height: 60px;
-    border: 2px solid #000;
-    border-left: 3px solid #000;
+    border: 1px solid #e2e8f0 !important;
+    
     border-radius: 10px !important;
-    background: #f0f4f8;
-    color: #1e293b;
+    background: #ffffff !important;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 20px;
     padding-left: 54px;
@@ -1714,7 +1714,7 @@ a.gold-btn {
     border-left: 3px solid #222;
     border-radius: 10px !important;
     background: #ffffff;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 20px;
     padding-left: 54px;
@@ -1886,7 +1886,7 @@ a.gold-btn {
     border-left: 3px solid #222;
     border-radius: 10px !important;
     background: #ffffff;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 20px;
     padding-left: 58px;
@@ -2015,7 +2015,7 @@ a.gold-btn {
     border-left: 3px solid #222;
     border-radius: 10px !important;
     background: #ffffff;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 18px;
     padding-left: 54px;
@@ -2317,7 +2317,7 @@ a.gold-btn {
     border-left: 3px solid #111;
     border-radius: 5px !important;
     background: #f8fafc;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 15px;
     z-index: 0;
@@ -2792,7 +2792,7 @@ a.gold-btn {
     border-left: 3px solid #111;
     border-radius: 10px !important;
     background: #f8fafc;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 18px;
     padding-right: 100px;
@@ -3032,7 +3032,7 @@ textarea:-webkit-autofill {
     border-left: 3px solid #111;
     border-radius: 10px !important;
     background: #f8fafc;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 18px;
     padding-right: 100px;
@@ -3148,11 +3148,11 @@ textarea:-webkit-autofill {
 .modal .form-group .form-select,
 .modal .form-group .form-control {
     height: 50px;
-    border: 2px solid #000;
-    border-left: 3px solid #000;
+    border: 1px solid #e2e8f0 !important;
+    
     border-radius: 10px !important;
-    background: #f0f4f8;
-    color: #1e293b;
+    background: #ffffff !important;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 10px;
     z-index: 0;
@@ -3969,7 +3969,7 @@ html[dir=rtl]  .newsletter-section .input-group .form-control {
     border-radius: 0px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    color: #1e293b;
+    color: #1e293b !important;
     font-size: 14px;
     padding: 12px;
     padding-right: 18px;
@@ -4072,4 +4072,18 @@ html[dir=rtl] .newsletter-section  .gold-btn {
 }
 .list h4 span {
     float: right;
+}
+
+
+/* UNIVERSAL FORM INPUT FIX */
+.form-control, .form-control:focus, .input-group .form-control {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.input-group .img {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-right: none !important;
 }
