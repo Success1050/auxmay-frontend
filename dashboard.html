@@ -67,7 +67,7 @@
             <div class="topbar-icons">
                 <i class="fa-regular fa-bell"></i>
                 <i class="fa-solid fa-sign-out-alt" style="margin-left:10px; cursor:pointer;" onclick="logout()" title="Logout"></i>
-                <div class="profile-icon"></div>
+                <div class="profile-icon" onclick="openProfileModal()" style="cursor: pointer;" title="Profile"></div>
                 <i class="fa-solid fa-bars" onclick="toggleSidebar()"></i>
             </div>
         </header>
@@ -194,7 +194,7 @@
 
                     <div style="background: var(--card-bg); padding: 20px; border-radius: 10px; border: 1px solid var(--border-color); text-align: left;">
                         <label style="color: var(--text-secondary); display: block; margin-bottom: 10px;">Payment Screenshot</label>
-                        <input type="file" id="depositScreenshot" accept="image/*" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <input type="file" id="depositScreenshot" accept="image/*" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
                         <button class="btn-primary" onclick="submitDeposit()" id="depositBtn">Submit For Approval</button>
                     </div>
                 </div>
@@ -208,15 +208,15 @@
                     <div class="stat-card" style="background: #ffffff;">
                         <h3 style="color: var(--gold); margin-bottom: 15px;">Transfer Interest</h3>
                         <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">Move funds from your Interest Balance to your Main Balance to withdraw them.</p>
-                        <input type="number" id="transferAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <input type="number" id="transferAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
                         <button class="btn-primary" onclick="transferInterest()" style="width: 100%;">Transfer to Main Balance</button>
                     </div>
 
                     <div class="stat-card" style="background: #ffffff;">
                         <h3 style="color: var(--gold); margin-bottom: 15px;">Request Withdrawal</h3>
                         <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">Withdraw funds from your Main Balance to your Bitcoin Wallet.</p>
-                        <input type="number" id="withdrawAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 10px;">
-                        <input type="text" id="withdrawAddress" placeholder="Your BTC Wallet Address" style="width: 100%; padding: 10px; background: #111; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <input type="number" id="withdrawAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 10px;">
+                        <input type="text" id="withdrawAddress" placeholder="Your BTC Wallet Address" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
                         <button class="btn-primary" onclick="requestWithdrawal()" style="width: 100%;">Submit Withdrawal</button>
                     </div>
                 </div>
@@ -227,15 +227,15 @@
                 <h1 class="section-title">Board of Directors</h1>
                 <div class="plans-container">
                     <div class="plan-card">
-                        <div class="qr-code" style="border-radius: 50%; overflow: hidden; margin-bottom: 20px;">
-                            <img src="https://via.placeholder.com/200x200/1a1a1a/d4af37?text=CEO" alt="Director">
+                        <div class="qr-code" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; display: flex; justify-content: center; align-items: center;">
+                            <img src="assets/uploads/logo/img2.jpeg" alt="John Doe" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
                         </div>
                         <h3 style="color: var(--gold); margin-bottom: 10px;">John Doe</h3>
                         <p style="color: var(--text-secondary);">Chief Executive Officer</p>
                     </div>
                     <div class="plan-card">
-                        <div class="qr-code" style="border-radius: 50%; overflow: hidden; margin-bottom: 20px;">
-                            <img src="https://via.placeholder.com/200x200/1a1a1a/d4af37?text=CFO" alt="Director">
+                        <div class="qr-code" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; display: flex; justify-content: center; align-items: center;">
+                            <img src="assets/uploads/logo/img3.jpeg" alt="Jane Smith" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;">
                         </div>
                         <h3 style="color: var(--gold); margin-bottom: 10px;">Jane Smith</h3>
                         <p style="color: var(--text-secondary);">Chief Financial Officer</p>
@@ -245,6 +245,33 @@
 
         </div>
     </main>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+        <div class="modal-content" style="background-color: var(--card-bg); margin: 10% auto; padding: 20px; border: 1px solid var(--border-color); width: 80%; max-width: 500px; border-radius: 10px;">
+            <span onclick="closeProfileModal()" style="color: var(--text-secondary); float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+            <h2 style="color: var(--text-primary); margin-bottom: 20px;">My Profile</h2>
+            
+            <form id="profileForm" onsubmit="updateProfile(event)">
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; color: var(--text-secondary); margin-bottom: 5px;">Full Name</label>
+                    <input type="text" id="profileFullName" placeholder="e.g. John Doe" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; color: var(--text-secondary); margin-bottom: 5px;">Phone Number</label>
+                    <input type="text" id="profilePhoneNumber" placeholder="e.g. +1234567890" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px;">
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; color: var(--text-secondary); margin-bottom: 5px;">BTC Wallet Address</label>
+                    <input type="text" id="profileBtcAddress" placeholder="Your BTC Address" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px;">
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%;" id="profileSaveBtn">Save Changes</button>
+            </form>
+        </div>
+    </div>
 
     <script src="assets/js/config.js"></script>
     <script>
@@ -281,6 +308,11 @@
                     document.getElementById('cardTotalDeposit').innerText = `$${parseFloat(data.balance.totalDeposit).toFixed(2)}`;
                     document.getElementById('cardTotalEarn').innerText = `$${parseFloat(data.balance.totalEarn).toFixed(2)}`;
                 }
+                
+                // Pre-fill profile modal fields if data exists
+                if (data.fullName) document.getElementById('profileFullName').value = data.fullName;
+                if (data.phoneNumber) document.getElementById('profilePhoneNumber').value = data.phoneNumber;
+                if (data.btcAddress) document.getElementById('profileBtcAddress').value = data.btcAddress;
 
                 // Show Admin Panel Link if user is Admin
                 if (data.isAdmin) {
@@ -317,6 +349,53 @@
                 console.error('Error fetching dashboard:', error);
             }
         });
+
+        // Profile Modal Logic
+        function openProfileModal() {
+            document.getElementById('profileModal').style.display = 'block';
+        }
+        function closeProfileModal() {
+            document.getElementById('profileModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('profileModal');
+            if (event.target == modal) {
+                closeProfileModal();
+            }
+        }
+        
+        async function updateProfile(event) {
+            event.preventDefault();
+            const btn = document.getElementById('profileSaveBtn');
+            btn.innerText = 'Saving...';
+            btn.disabled = true;
+            
+            const fullName = document.getElementById('profileFullName').value;
+            const phoneNumber = document.getElementById('profilePhoneNumber').value;
+            const btcAddress = document.getElementById('profileBtcAddress').value;
+            
+            const token = localStorage.getItem('access_token');
+            try {
+                const res = await fetch(ENV.API_URL + '/user/profile', {
+                    method: 'PUT',
+                    headers: { 
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ fullName, phoneNumber, btcAddress })
+                });
+                
+                if (!res.ok) throw new Error('Failed to update profile');
+                
+                alert('Profile updated successfully!');
+                closeProfileModal();
+            } catch (err) {
+                alert(err.message);
+            } finally {
+                btn.innerText = 'Save Changes';
+                btn.disabled = false;
+            }
+        }
 
         // Logout function
         async function logout() {
