@@ -194,7 +194,7 @@
 
                     <div style="background: var(--card-bg); padding: 20px; border-radius: 10px; border: 1px solid var(--border-color); text-align: left;">
                         <label style="color: var(--text-secondary); display: block; margin-bottom: 10px;">Payment Screenshot</label>
-                        <input type="file" id="depositScreenshot" accept="image/*" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <input type="file" id="depositScreenshot" accept="image/*" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px; margin-bottom: 15px;">
                         <button class="btn-primary" onclick="submitDeposit()" id="depositBtn">Submit For Approval</button>
                     </div>
                 </div>
@@ -208,15 +208,15 @@
                     <div class="stat-card" style="background: #ffffff;">
                         <h3 style="color: var(--gold); margin-bottom: 15px;">Transfer Interest</h3>
                         <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">Move funds from your Interest Balance to your Main Balance to withdraw them.</p>
-                        <input type="number" id="transferAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <input type="number" id="transferAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px; margin-bottom: 15px;">
                         <button class="btn-primary" onclick="transferInterest()" style="width: 100%;">Transfer to Main Balance</button>
                     </div>
 
                     <div class="stat-card" style="background: #ffffff;">
                         <h3 style="color: var(--gold); margin-bottom: 15px;">Request Withdrawal</h3>
                         <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 15px;">Withdraw funds from your Main Balance to your Bitcoin Wallet.</p>
-                        <input type="number" id="withdrawAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 10px;">
-                        <input type="text" id="withdrawAddress" placeholder="Your BTC Wallet Address" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; color: white; border: 1px solid #333; border-radius: 5px; margin-bottom: 15px;">
+                        <input type="number" id="withdrawAmount" placeholder="Amount (USD)" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px; margin-bottom: 10px;">
+                        <input type="text" id="withdrawAddress" placeholder="Your BTC Wallet Address" style="width: 100%; padding: 10px; background: #ffffff; color: #1e293b; border: 1px solid #e2e8f0; border-radius: 5px; margin-bottom: 15px;">
                         <button class="btn-primary" onclick="requestWithdrawal()" style="width: 100%;">Submit Withdrawal</button>
                     </div>
                 </div>
