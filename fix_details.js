@@ -9,7 +9,7 @@ function processHtmlFile(filePath) {
     content = content.replace(/225 West Main St\. Lewistown MT 59458, USA/g, '30, 1920 E Serene Ave, NV 89123, Las Vegas, USA.');
 
     // 2. Replace Email
-    content = content.replace(/info@coinexcrypto\.trade/g, 'info@coinex.com');
+    content = content.replace(/info@coinexcrypto\.trade/g, 'info@coinex.ink');
 
     // 3. Replace Toll Free No (Phone)
     content = content.replace(/<span>Toll Free No<\/span>/g, '<span>+16786530369</span>');
