@@ -11,8 +11,11 @@ function replaceInDir(dir) {
             }
         } else if (fullPath.endsWith('.html') || fullPath.endsWith('.js') || fullPath.endsWith('.css')) {
             let content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('info@coinex.ink')) {
-                content = content.replace(/info@coinex\.com/g, 'info@coinex.ink');
+            const oldEmail = 'coinexbtc@infocoinex.space';
+            const newEmail = 'coinexbtc@infocoinex.space';
+            
+            if (content.includes(oldEmail)) {
+                content = content.replace(new RegExp(oldEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), newEmail);
                 fs.writeFileSync(fullPath, content, 'utf8');
                 console.log(`Updated ${fullPath}`);
             }
@@ -21,4 +24,4 @@ function replaceInDir(dir) {
 }
 
 replaceInDir(__dirname);
-console.log("Done updating emails!");
+console.log("Done updating emails to coinexbtc@infocoinex.space!");
