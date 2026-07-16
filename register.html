@@ -1849,49 +1849,74 @@
     </script>
     <!--End of Tawk.to Script-->
 
-
-
 <!-- Custom Register Script -->
 <script src="assets/js/config.js"></script>
 <script>
-    document.getElementById('registerForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = document.querySelector('input[name="email"]').value;
-        const password = document.querySelector('input[name="password"]').value;
-        const passwordConfirmation = document.querySelector('input[name="password_confirmation"]').value;
-        const button = e.target.querySelector('button[type="submit"]');
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('registerForm');
+        if (!form) return;
         
-        if (password !== passwordConfirmation) {
-            alert('Passwords do not match!');
-            return;
-        }
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            try {
+                const emailInput = document.querySelector('input[name="email"]');
+                const passwordInput = document.querySelector('input[name="password"]');
+                const confirmInput = document.querySelector('input[name="password_confirmation"]');
+                
+                let button = null;
+                if (e.target) {
+                    button = e.target.querySelector('button[type="submit"]') || e.target.querySelector('button');
+                }
+                
+                if (!emailInput || !passwordInput || !confirmInput) {
+                    alert('Error: Missing input fields.');
+                    return;
+                }
+                
+                const email = emailInput.value;
+                const password = passwordInput.value;
+                const passwordConfirmation = confirmInput.value;
+                
+                if (password !== passwordConfirmation) {
+                    alert('Passwords do not match!');
+                    return;
+                }
 
-        try {
-            button.innerText = 'Creating account...';
-            button.disabled = true;
-            
-            const response = await fetch(ENV.API_URL + '/auth/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password })
-            });
-            
-            if (!response.ok) {
-                const err = await response.json();
-                throw new Error(err.message || 'Registration failed');
+                if (button) {
+                    button.innerText = 'Creating account...';
+                    button.disabled = true;
+                }
+                
+                const apiUrl = (typeof ENV !== 'undefined' && ENV.API_URL) ? ENV.API_URL : 'https://axumay-backend.onrender.com';
+                
+                const response = await fetch(apiUrl + '/auth/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                
+                if (!response.ok) {
+                    const err = await response.json();
+                    throw new Error(err.message || 'Registration failed');
+                }
+                
+                const data = await response.json();
+                localStorage.setItem('access_token', data.access_token);
+                window.location.href = 'dashboard.html';
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                let button = null;
+                if (e.target) {
+                    button = e.target.querySelector('button[type="submit"]') || e.target.querySelector('button');
+                }
+                if (button) {
+                    button.innerText = 'Sign Up';
+                    button.disabled = false;
+                }
             }
-            
-            const data = await response.json();
-            // Store JWT token
-            localStorage.setItem('access_token', data.access_token);
-            // Redirect to dashboard
-            window.location.href = 'dashboard.html';
-        } catch (error) {
-            alert('Error: ' + error.message);
-        } finally {
-            button.innerText = 'Sign Up';
-            button.disabled = false;
-        }
+        });
     });
 </script>
 
@@ -1910,7 +1935,4 @@ function togglePassword(inputId, iconId) {
 }
 </script>
 </body>
-
-
-<!-- Mirrored from coinexcrypto.trade/register by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 May 2026 00:29:04 GMT -->
 </html>
